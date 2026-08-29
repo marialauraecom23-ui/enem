@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import './styles.css';
+import './styles.css?v=20260829-3';
 
 const steps = [
   ['01','Identifique o problema','Entenda exatamente o que o tema está pedindo.'],
