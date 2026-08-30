@@ -1,0 +1,46 @@
+/* Premium visual layer — intentionally separate so the Replit preview can update cleanly. */
+:root{--sale-lilac:#c9b9f4;--sale-ink:#101116;--sale-paper:#f6f2ea}
+body{background:var(--sale-paper)}
+.hero{background:linear-gradient(135deg,#0c0d10 0%,#14151d 58%,#25243a 100%)!important;position:relative}
+.hero:after{content:'';position:absolute;inset:auto 0 0;height:220px;background:linear-gradient(transparent,rgba(0,0,0,.35));pointer-events:none}
+.heroGrid{position:relative;z-index:2}
+.heroVisual:before{content:'10 PÁGINAS • GUIA DIGITAL';position:absolute;right:14px;top:18px;z-index:4;padding:9px 12px;border:1px solid rgba(255,255,255,.25);background:rgba(10,11,14,.68);backdrop-filter:blur(10px);font-size:9px;letter-spacing:.14em;color:#ddd}
+.heroPhoto{border-radius:18px!important;outline:1px solid rgba(255,255,255,.16);box-shadow:0 35px 100px rgba(0,0,0,.55)!important}
+.heroVisual .book{border-radius:3px!important;box-shadow:18px 28px 65px rgba(0,0,0,.6)!important}
+.light{background:var(--sale-paper)!important}
+.identification{background:linear-gradient(180deg,#f6f2ea,#ebe5dc)!important}
+.editorialImage{border-radius:20px!important;box-shadow:0 25px 65px rgba(20,20,20,.12)}
+.editorialImage:after,.offerVisual:after{content:'';position:absolute;inset:0;background:linear-gradient(145deg,transparent 55%,rgba(201,185,244,.24));pointer-events:none}
+.pain{background:rgba(255,255,255,.5)!important;border-radius:0!important;min-height:155px!important;padding:32px 25px!important}
+.pain:before{content:'●'!important;font-size:8px!important}
+.diagnosis{background:#0b0c10!important}
+.process{border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.25)}
+.step{min-height:240px!important;padding:38px!important}
+.step span{display:inline-flex;border:1px solid rgba(201,185,244,.35);padding:6px 9px}
+.practical{background:#e8e1f7!important}
+.example{border-radius:22px!important;box-shadow:0 35px 90px rgba(34,25,60,.12)!important}
+.example>div{padding:30px 34px!important}
+.thesis{background:#dcd0f5!important}
+.contents{background:#0d0e12!important}
+.contentsIntro>img{border-radius:20px!important;box-shadow:0 25px 70px rgba(0,0,0,.35)}
+.cards{border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.25)}
+.cards article{min-height:230px!important;padding:36px!important}
+.repertory{background:#c5dce6!important}
+.repGrid{border-radius:18px;overflow:hidden;box-shadow:0 25px 70px rgba(20,40,50,.12)}
+.rep{min-height:205px!important;padding:30px!important;background:rgba(248,246,240,.78)!important}
+.honesty{background:#0b0c10!important}
+.honestyVisual img{border-radius:20px;box-shadow:0 25px 70px rgba(0,0,0,.35)}
+.audience{background:#e7def8!important}
+.checks{border-top-color:rgba(16,17,22,.2)}
+.checks div{background:rgba(255,255,255,.28)}
+.offer{background:radial-gradient(circle at 70% 40%,#29253d 0,#101116 48%,#08090b 100%)!important}
+.offerCard{border-radius:24px!important;overflow:hidden;box-shadow:0 45px 120px rgba(0,0,0,.55)!important}
+.offerVisual{border-radius:18px;overflow:visible}
+.offerVisual>img{border-radius:18px!important}
+.calculator{border-radius:16px!important;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.calculator button{border-radius:10px!important}
+.faq{background:#f6f2ea!important}
+.faqList details{transition:background .2s;padding-left:18px;padding-right:18px}
+.faqList details:hover{background:#ebe5dc}
+footer{background:#0b0c10!important}
+@media(max-width:900px){.heroVisual:before{right:8px;top:5px}.heroVisual .book{right:-4px!important}.pain{min-height:auto!important}.process,.cards,.repGrid{border-radius:12px}.offerCard{border-radius:16px!important}.offerVisual{overflow:visible}}
