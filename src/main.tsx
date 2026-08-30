@@ -1,14 +1,14 @@
 import React, { useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import './styles.css?v=20260829-4';
+import './styles.css?v=20260829-5';
 
 const steps=[['01','Identifique o problema','Entenda exatamente o que o tema está pedindo.'],['02','Encontre as causas','Pergunte por que o problema acontece.'],['03','Escolha 2 argumentos','Defina os dois caminhos que vão sustentar sua tese.'],['04','Selecione repertórios','Escolha referências que realmente tenham conexão.'],['05','Monte sua tese','Organize seus dois argumentos em uma ideia clara.'],['06','Escreva e revise','Transforme o plano em redação e confira antes de entregar.']];
 const repertorios=[['Constituição Federal','Direitos sociais e dever do Estado','Cidadania, saúde, educação, desigualdade'],['Paulo Freire','Educação crítica e emancipação','Educação, desigualdade, exclusão'],['Zygmunt Bauman','Relações e sociedade na modernidade líquida','Tecnologia, consumo, relações sociais'],['Black Mirror','Impactos sociais e éticos da tecnologia','Tecnologia, comportamento, privacidade'],['Ailton Krenak','Relação entre sociedade e natureza','Meio ambiente, sustentabilidade, cultura'],['Carolina Maria de Jesus','Desigualdade e vulnerabilidade social','Pobreza, fome, desigualdade']];
 const offerItems=[['E-book estratégico',14.90],['Método de planejamento em 6 passos',19.90],['Repertórios socioculturais',17.90],['Estratégia de argumentação',19.90],['Proposta de intervenção',14.90],['Checklist de revisão',9.90],['Conteúdos complementares',12.90]];
 const formatBRL=(v:number)=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
-const IMG_STUDENT='https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=85';
-const IMG_NOTEBOOK='https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1200&q=85';
-const IMG_BOOKS='https://images.unsplash.com/photo-1457369804613-52c61a468e7e?auto=format&fit=crop&w=1200&q=85';
+const IMG_STUDENT='/assets/student-editorial.svg';
+const IMG_NOTEBOOK='/assets/notebook-editorial.svg';
+const IMG_BOOKS='/assets/books-editorial.svg';
 function App(){
  const[selected,setSelected]=useState<boolean[]>(offerItems.map(()=>true));
  const referenceTotal=useMemo(()=>offerItems.reduce((s,i)=>s+(i[1] as number),0),[]); const currentTotal=useMemo(()=>offerItems.reduce((s,i,n)=>s+(selected[n]?(i[1] as number):0),0),[selected]); const launchPrice=19.90; const savings=Math.max(currentTotal-launchPrice,0); const toggle=(n:number)=>setSelected(p=>p.map((v,i)=>i===n?!v:v));
